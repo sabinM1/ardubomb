@@ -20,6 +20,7 @@ the bomb has been planted
   - [ ] timer de 40 de secunde
   - [ ] defuze cu buton
 - [ ] schemă electronică (fritzing/kicad)
+- [ ] asamblat pe placă de prototipare
 - [ ] de proiectat model 3D pentru bombă ~~(poți să zici că modelul va fi bombă)~~
   - [ ] de printat modelul
 - [x] ~~realizezi că a mai fost făcut așa ceva~~
