@@ -1,42 +1,36 @@
-#include <LiquidCrystal.h>
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
 
-LiquidCrystal lcd(7, 6, 5, 4, 3, 2);
+LiquidCrystal_I2C lcd(0x27,16,2);
 
-char a='8',b='0',c='6',d='5',e='5',f='3',g='7';
+const char charset[] = {
+  '8', '0', '6', '5', '5', '3', '7'
+};
+
+inline void init();
+void write_next(char caracter, short cursor);
 
 void setup() {
-  // put your setup code here, to run once:
-lcd.begin(16,2);
-lcd.clear();
-lcd.write("*******");
-delay(700);
-lcd.cursor();
-delay(500);
-lcd.setCursor(6,0);
-delay(500);
-lcd.write(a);
-lcd.setCursor(5,0);
-delay(500);
-lcd.write(b);
-lcd.setCursor(4,0);
-delay(500);
-lcd.write(c);
-lcd.setCursor(3,0);
-delay(500);
-lcd.write(d);
-lcd.setCursor(2,0);
-delay(500);
-lcd.write(e);
-lcd.setCursor(1,0);
-delay(500);
-lcd.write(f);
-lcd.setCursor(0,0);
-delay(500);
-lcd.write(g);
-lcd.noCursor();
+  init();
+  lcd.print("*******");
+  delay(2000);
+  for (short i = 0; i < 7; ++i)
+    write_next(charset[i], 6 - i);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
 
+}
+
+inline void init() {
+  lcd.init();
+  lcd.clear();
+  lcd.backlight();
+  lcd.setCursor(0, 0);
+}
+
+void write_next(char caracter, short cursor) {
+  lcd.setCursor(cursor--, 0);
+  lcd.write(caracter);
+  delay(500);
 }
