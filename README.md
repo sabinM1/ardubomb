@@ -14,6 +14,7 @@ the bomb has been planted
      ![keypad1](/imagini/keypad1.png)
 - [ ] buzzer/piezo
 - [ ] buton defuze
+- [ ] link-uri către librării ([LiquidCrystal I2C](https://www.arduino.cc/reference/en/libraries/liquidcrystal-i2c/), [Keypad](https://playground.arduino.cc/Code/Keypad/))
 - [ ] program complet
   - [ ] se tasteaza codul și se verifică
   - [ ] timer de 40 de secunde
