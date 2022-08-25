@@ -1,39 +1,39 @@
 #include <LiquidCrystal.h>
 
-LiquidCrystal yourmum(7, 6, 5, 4, 3, 2);
+LiquidCrystal lcd(7, 6, 5, 4, 3, 2);
 
 char a='8',b='0',c='6',d='5',e='5',f='3',g='7';
 
 void setup() {
   // put your setup code here, to run once:
-yourmum.begin(16,2);
-yourmum.clear();
-yourmum.write("*******");
+lcd.begin(16,2);
+lcd.clear();
+lcd.write("*******");
 delay(700);
-yourmum.cursor();
+lcd.cursor();
 delay(500);
-yourmum.setCursor(6,0);
+lcd.setCursor(6,0);
 delay(500);
-yourmum.write(a);
-yourmum.setCursor(5,0);
+lcd.write(a);
+lcd.setCursor(5,0);
 delay(500);
-yourmum.write(b);
-yourmum.setCursor(4,0);
+lcd.write(b);
+lcd.setCursor(4,0);
 delay(500);
-yourmum.write(c);
-yourmum.setCursor(3,0);
+lcd.write(c);
+lcd.setCursor(3,0);
 delay(500);
-yourmum.write(d);
-yourmum.setCursor(2,0);
+lcd.write(d);
+lcd.setCursor(2,0);
 delay(500);
-yourmum.write(e);
-yourmum.setCursor(1,0);
+lcd.write(e);
+lcd.setCursor(1,0);
 delay(500);
-yourmum.write(f);
-yourmum.setCursor(0,0);
+lcd.write(f);
+lcd.setCursor(0,0);
 delay(500);
-yourmum.write(g);
-yourmum.noCursor();
+lcd.write(g);
+lcd.noCursor();
 }
 
 void loop() {
